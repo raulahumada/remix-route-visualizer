@@ -7,6 +7,15 @@
     "vscode": "^1.102.0"
   },
   "publisher": "rahumada",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rahumada/remix-route-visualizer"
+  },
+  "keywords": [
+    "remix",
+    "routes",
+    "visualizer"
+  ],
   "categories": [
     "Other"
   ],
