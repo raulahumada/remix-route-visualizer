@@ -19,6 +19,7 @@
   "categories": [
     "Other"
   ],
+  "icon": "resources/icon.png",
   "activationEvents": [
     "onLanguage:typescript",
     "onLanguage:javascript",
