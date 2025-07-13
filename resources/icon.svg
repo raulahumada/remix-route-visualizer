@@ -1,0 +1,19 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#1E293B" stroke="#3B82F6" stroke-width="4"/>
+  
+  <!-- Remix "R" stylized -->
+  <path d="M35 40 L35 88 L45 88 L45 70 L55 70 L65 88 L77 88 L65 68 C70 66 73 62 73 55 C73 46 67 40 58 40 L35 40 Z M45 50 L58 50 C62 50 63 52 63 55 C63 58 62 60 58 60 L45 60 L45 50 Z" fill="#3B82F6"/>
+  
+  <!-- Route lines -->
+  <path d="M85 35 L110 35 M85 45 L105 45 M85 55 L100 55" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+  <path d="M85 75 L110 75 M85 85 L105 85 M85 95 L100 95" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Connection dots -->
+  <circle cx="80" cy="40" r="3" fill="#10B981"/>
+  <circle cx="80" cy="80" r="3" fill="#F59E0B"/>
+  
+  <!-- Dynamic parameter indicator -->
+  <path d="M90 60 L95 65 L90 70" stroke="#EF4444" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 60 L105 65 L100 70" stroke="#EF4444" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> 
