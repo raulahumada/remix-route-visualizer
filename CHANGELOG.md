@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.2] - 2024-12-27
+
+### Changed
+
+- Reduced minimum VS Code version requirement from 1.102.0 to 1.74.0 for Cursor compatibility
+
 ## [0.0.1] - 2024-12-27
 
 ### Added

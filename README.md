@@ -50,7 +50,7 @@ This extension understands Remix route conventions:
 
 ## Requirements
 
-- VS Code 1.102.0 or higher
+- VS Code 1.74.0 or higher (compatible with Cursor)
 - Remix project (automatically detected)
 
 ## Installation
