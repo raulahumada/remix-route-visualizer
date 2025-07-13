@@ -1,0 +1,116 @@
+{
+  "name": "remix-route-visualizer",
+  "displayName": "Remix Route Visualizer",
+  "description": "Visualizador de rutas de Remix para VS Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:typescript",
+    "onLanguage:javascript",
+    "onLanguage:typescriptreact",
+    "onLanguage:javascriptreact",
+    "workspaceContains:**/remix.config.js",
+    "workspaceContains:**/remix.config.ts"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "id": "remixRoutes",
+          "name": "Remix Routes",
+          "when": "true"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "remix-route-visualizer.refresh",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "remix-route-visualizer.filter",
+        "title": "Filter Routes",
+        "icon": "$(filter)"
+      },
+      {
+        "command": "remix-route-visualizer.clearFilter",
+        "title": "Clear Filter",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "remix-route-visualizer.showInfo",
+        "title": "Project Information",
+        "icon": "$(info)"
+      },
+      {
+        "command": "remix-route-visualizer.openDocs",
+        "title": "Remix Documentation",
+        "icon": "$(book)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "remix-route-visualizer.refresh",
+          "when": "view == remixRoutes",
+          "group": "navigation"
+        },
+        {
+          "command": "remix-route-visualizer.filter",
+          "when": "view == remixRoutes",
+          "group": "navigation"
+        },
+        {
+          "command": "remix-route-visualizer.clearFilter",
+          "when": "view == remixRoutes"
+        },
+        {
+          "command": "remix-route-visualizer.showInfo",
+          "when": "view == remixRoutes"
+        },
+        {
+          "command": "remix-route-visualizer.openDocs",
+          "when": "view == remixRoutes"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "vscode.open",
+          "when": "view == remixRoutes && viewItem == remixRouteItem"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.102.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3",
+    "ts-loader": "^9.5.2",
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
