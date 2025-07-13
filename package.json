@@ -1,7 +1,7 @@
 {
   "name": "remix-route-visualizer",
   "displayName": "Remix Route Visualizer",
-  "description": "Visualizador de rutas de Remix para VS Code",
+  "description": "Visualize Remix routes in VS Code",
   "version": "0.0.2",
   "engines": {
     "vscode": "^1.74.0"
