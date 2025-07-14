@@ -44,7 +44,7 @@ export class RemixRouteItem extends vscode.TreeItem {
     const relativePath = path.relative(workspaceRoot, this.filePath);
 
     return [
-      `U  RL: ${this.routeUrl}`,
+      `URL: ${this.routeUrl}`,
       `Type: ${this.getCategoryDisplayName()}`,
       `File: ${relativePath}`,
     ].join('\n');
@@ -113,8 +113,7 @@ interface RouteInfo {
  * Data provider for the Remix routes tree
  */
 export class RemixRouteProvider
-  implements vscode.TreeDataProvider<RemixRouteItem>
-{
+  implements vscode.TreeDataProvider<RemixRouteItem> {
   private treeDataChanged = new vscode.EventEmitter<
     RemixRouteItem | undefined | null | void
   >();
